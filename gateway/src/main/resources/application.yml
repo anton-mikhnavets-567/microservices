@@ -1,0 +1,80 @@
+server:
+  port: 8585
+  forward-headers-strategy: framework
+
+spring:
+
+  main:
+    web-application-type: reactive
+
+  application:
+    name: api-gateway
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:9090/realms/microservices_realm/protocol/openid-connect/certs
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:9090/realms/microservices_realm
+
+        registration:
+          api-gateway:
+            provider: keycloak
+            client-id: api-gateway
+            client-secret: OEokGgD5DwLxd9Z7pkD7OPRTTxh4Ryr5
+            authorization-grant-type: authorization_code
+            scope: openid
+  cloud:
+    gateway:
+      default-filters:
+        - TokenRelay=
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configuration:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowed-headers: "*"
+      routes:
+        - id: statistics-service
+          uri: http://localhost:8084
+          predicates:
+            - Path=/stats/**
+
+#        - id: mail-sender-service
+#          uri: http://localhost:8085
+#          predicates:
+#            - Path=/mail-sender/**
+
+        - id: ticket-service
+#          uri: lb://TICKET-SERVICE
+          uri: http://localhost:8081
+          predicates:
+            - Path=/tickets/**
+
+        - id: user-service
+#          uri: lb://USER-SERVICE
+          uri: http://localhost:8082
+          predicates:
+            - Path=/users/**
+
+        - id: attachment-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/attachments/**
+
+    config:
+      enabled: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+logging.level:
+  org.springframework.cloud.gateway: DEBUG
+  org.springframework.security: TRACE
+  org.springframework.web.reactive.function.client: TRACE

@@ -1,0 +1,1589 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet author="Dell (generated)" id="1720177745106-1">
+        <insert tableName="category">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Облачные вычисления"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="3"/>
+            <column name="name" value="Формирование отчёта"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Анализ данных"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="5"/>
+            <column name="name" value="Совместимость с устройствами"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="4"/>
+            <column name="name" value="Предоставление информации"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Dell (generated)" id="1720177745106-2">
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="72"/>
+            <column name="name" value="Частый сбой в вечернее время"/>
+            <column name="description" value="Приложение часто выходит из строя именно вечером, нужно разобраться в причинах."/>
+            <column name="created_on" valueDate="2023-11-28"/>
+            <column name="desired_resolution_date" valueDate="2023-12-03"/>
+            <column name="assignee_id" valueNumeric="6"/>
+            <column name="owner_id" valueNumeric="3"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="urgency" value="Critical"/>
+            <column name="approver_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="75"/>
+            <column name="name" value="Приходит кривой шаблон"/>
+            <column name="description" value="Шаблон, который приходит, кажется испорченным или неправильно отображается."/>
+            <column name="created_on" valueDate="2024-02-29"/>
+            <column name="desired_resolution_date" valueDate="2024-03-04"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="3"/>
+            <column name="urgency" value="High"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="86"/>
+            <column name="name" value="Неверные данные"/>
+            <column name="description" value="Получаемые данные кажутся неверными или несоответствующими ожидаемому формату."/>
+            <column name="created_on" valueDate="2024-01-21"/>
+            <column name="desired_resolution_date" valueDate="2024-01-28"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="4"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="3"/>
+            <column name="urgency" value="High"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="67"/>
+            <column name="name" value="Нельзя создать нужный элемент"/>
+            <column name="description" value="При попытке создания элемента возникает ошибка, элемент не создается."/>
+            <column name="created_on" valueDate="2023-11-18"/>
+            <column name="desired_resolution_date" valueDate="2023-11-21"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="3"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="2"/>
+            <column name="urgency" value="Low"/>
+            <column name="approver_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="73"/>
+            <column name="name" value="Долгая загрузка"/>
+            <column name="description" value="Приложение загружается очень долго, требуется оптимизация процесса загрузки."/>
+            <column name="created_on" valueDate="2024-06-01"/>
+            <column name="desired_resolution_date" valueDate="2024-06-28"/>
+            <column name="assignee_id" valueNumeric="6"/>
+            <column name="owner_id" valueNumeric="1"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="4"/>
+            <column name="urgency" value="High"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="70"/>
+            <column name="name" value="Не приходят уведомления"/>
+            <column name="description" value="Не приходят уведомления на мой телефон, необходимо исправить проблему."/>
+            <column name="created_on" valueDate="2024-01-02"/>
+            <column name="desired_resolution_date" valueDate="2024-01-06"/>
+            <column name="assignee_id" valueNumeric="6"/>
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="5"/>
+            <column name="urgency" value="High"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="94"/>
+            <column name="name" value="Долгое получение формы"/>
+            <column name="description" value="Получение формы занимает слишком много времени, процесс должен быть оптимизирован."/>
+            <column name="created_on" valueDate="2024-01-15"/>
+            <column name="desired_resolution_date" valueDate="2024-01-24"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="4"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="3"/>
+            <column name="urgency" value="Critical"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="84"/>
+            <column name="name" value="Непонятная ошибка"/>
+            <column name="description" value="Приложение выдает непонятную ошибку без каких-либо дополнительных пояснений."/>
+            <column name="created_on" valueDate="2024-01-23"/>
+            <column name="desired_resolution_date" valueDate="2024-01-30"/>
+            <column name="assignee_id" valueNumeric="6"/>
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="state" value="Cancelled"/>
+            <column name="category_id" valueNumeric="4"/>
+            <column name="urgency" value="Critical"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="100"/>
+            <column name="name" value="Мало данных"/>
+            <column name="description" value="Полученные данные недостаточны для выполнения необходимых действий."/>
+            <column name="created_on" valueDate="2024-06-04"/>
+            <column name="desired_resolution_date" valueDate="2024-06-27"/>
+            <column name="assignee_id"/>
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="state" value="Approved"/>
+            <column name="category_id" valueNumeric="4"/>
+            <column name="urgency" value="High"/>
+            <column name="approver_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="95"/>
+            <column name="name" value="Невозможно подключиться к серверу"/>
+            <column name="description" value="Приложение не может подключиться к серверу, нет доступа к онлайн-сервисам."/>
+            <column name="created_on" valueDate="2023-11-15"/>
+            <column name="desired_resolution_date" valueDate="2023-11-22"/>
+            <column name="assignee_id"/>
+            <column name="owner_id" valueNumeric="1"/>
+            <column name="state" value="Declined"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="urgency" value="Critical"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="102"/>
+            <column name="name" value="Сервер не отвечает"/>
+            <column name="description" value="Сервер не отвечает на запросы, нет доступа к онлайн-сервисам."/>
+            <column name="created_on" valueDate="2024-06-06"/>
+            <column name="desired_resolution_date" valueDate="2024-06-30"/>
+            <column name="assignee_id"/>
+            <column name="owner_id" valueNumeric="1"/>
+            <column name="state" value="New"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="urgency" value="High"/>
+            <column name="approver_id"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="82"/>
+            <column name="name" value="Ошибка обработки больших объёмов данных"/>
+            <column name="description" value="При обработке больших объемов данных возникает ошибка, данные не обрабатываются корректно."/>
+            <column name="created_on" valueDate="2023-12-17"/>
+            <column name="desired_resolution_date" valueDate="2023-12-23"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="4"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="2"/>
+            <column name="urgency" value="Low"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="74"/>
+            <column name="name" value="Выбрасывает из системы"/>
+            <column name="description" value="Приложение неожиданно выбрасывает из системы в процессе использования."/>
+            <column name="created_on" valueDate="2024-06-05"/>
+            <column name="desired_resolution_date" valueDate="2024-06-22"/>
+            <column name="assignee_id"/>
+            <column name="owner_id" valueNumeric="4"/>
+            <column name="state" value="New"/>
+            <column name="category_id" valueNumeric="4"/>
+            <column name="urgency" value="High"/>
+            <column name="approver_id"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="97"/>
+            <column name="name" value="Отсутствует страница"/>
+            <column name="description" value="Запрашиваемая страница отсутствует, ошибка 404."/>
+            <column name="created_on" valueDate="2023-11-02"/>
+            <column name="desired_resolution_date" valueDate="2023-11-05"/>
+            <column name="assignee_id" valueNumeric="6"/>
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="3"/>
+            <column name="urgency" value="Critical"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="92"/>
+            <column name="name" value="Форматирование строк неверно"/>
+            <column name="description" value="Строки данных неправильно форматируются или отображаются."/>
+            <column name="created_on" valueDate="2024-02-10"/>
+            <column name="desired_resolution_date" valueDate="2024-02-23"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="1"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="2"/>
+            <column name="urgency" value="Low"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="101"/>
+            <column name="name" value="Не приходят уведомления"/>
+            <column name="description" value="Не приходят уведомления на мой телефон, необходимо разобраться в причинах."/>
+            <column name="created_on" valueDate="2023-12-17"/>
+            <column name="desired_resolution_date" valueDate="2023-12-23"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="1"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="5"/>
+            <column name="urgency" value="High"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="68"/>
+            <column name="name" value="Бесконечная загрузка"/>
+            <column name="description" value="Приложение застревает в бесконечной загрузке после запуска."/>
+            <column name="created_on" valueDate="2024-06-05"/>
+            <column name="desired_resolution_date" valueDate="2024-06-22"/>
+            <column name="assignee_id"/>
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="state" value="New"/>
+            <column name="category_id" valueNumeric="5"/>
+            <column name="urgency" value="Average"/>
+            <column name="approver_id"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="96"/>
+            <column name="name" value="Авторизация неудачна"/>
+            <column name="description" value="Попытка авторизации неудачна, не удается получить доступ к системе."/>
+            <column name="created_on" valueDate="2024-02-21"/>
+            <column name="desired_resolution_date" valueDate="2024-03-01"/>
+            <column name="assignee_id"/>
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="state" value="Declined"/>
+            <column name="category_id" valueNumeric="4"/>
+            <column name="urgency" value="Critical"/>
+            <column name="approver_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="71"/>
+            <column name="name" value="Постоянно требуется ввод логина"/>
+            <column name="description" value="Приложение постоянно запрашивает ввод логина при каждом запуске."/>
+            <column name="created_on" valueDate="2023-12-23"/>
+            <column name="desired_resolution_date" valueDate="2023-12-27"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="4"/>
+            <column name="state" value="Cancelled"/>
+            <column name="category_id" valueNumeric="2"/>
+            <column name="urgency" value="Critical"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="90"/>
+            <column name="name" value="Отчёт в неверном формате"/>
+            <column name="description" value="Отчет, который приходит, имеет неверный формат или неправильно отображается."/>
+            <column name="created_on" valueDate="2023-12-27"/>
+            <column name="desired_resolution_date" valueDate="2024-01-02"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="3"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="3"/>
+            <column name="urgency" value="Low"/>
+            <column name="approver_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="66"/>
+            <column name="name" value="Отсутствие модуля"/>
+            <column name="description" value="Не удается найти необходимый модуль для выполнения задачи."/>
+            <column name="created_on" valueDate="2024-02-23"/>
+            <column name="desired_resolution_date" valueDate="2024-02-26"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="urgency" value="Low"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="80"/>
+            <column name="name" value="Проблема со входом"/>
+            <column name="description" value="Возникают проблемы с входом в систему, не удается выполнить аутентификацию."/>
+            <column name="created_on" valueDate="2023-11-18"/>
+            <column name="desired_resolution_date" valueDate="2023-11-26"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="1"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="4"/>
+            <column name="urgency" value="Average"/>
+            <column name="approver_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="98"/>
+            <column name="name" value="Ошибка доступа"/>
+            <column name="description" value="Ошибка доступа, пользователь не имеет необходимых прав для выполнения операции."/>
+            <column name="created_on" valueDate="2024-06-01"/>
+            <column name="desired_resolution_date" valueDate="2024-06-29"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="state" value="In_progress"/>
+            <column name="category_id" valueNumeric="2"/>
+            <column name="urgency" value="High"/>
+            <column name="approver_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="87"/>
+            <column name="name" value="Несовместимость с телефоном"/>
+            <column name="description" value="Приложение не совместимо с моим телефоном, не удается запустить его."/>
+            <column name="created_on" valueDate="2024-06-02"/>
+            <column name="desired_resolution_date" valueDate="2024-06-19"/>
+            <column name="assignee_id"/>
+            <column name="owner_id" valueNumeric="1"/>
+            <column name="state" value="Approved"/>
+            <column name="category_id" valueNumeric="5"/>
+            <column name="urgency" value="Low"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="91"/>
+            <column name="name" value="Данные не анализируются"/>
+            <column name="description" value="Полученные данные не анализируются или не обрабатываются как ожидалось."/>
+            <column name="created_on" valueDate="2024-02-16"/>
+            <column name="desired_resolution_date" valueDate="2024-02-19"/>
+            <column name="assignee_id" valueNumeric="6"/>
+            <column name="owner_id" valueNumeric="4"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="2"/>
+            <column name="urgency" value="Low"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="69"/>
+            <column name="name" value="Несовместимость с телефоном"/>
+            <column name="description" value="Приложение не совместимо с моим телефоном, возникают проблемы при запуске."/>
+            <column name="created_on" valueDate="2023-11-24"/>
+            <column name="desired_resolution_date" valueDate="2023-12-03"/>
+            <column name="assignee_id"/>
+            <column name="owner_id" valueNumeric="4"/>
+            <column name="state" value="Declined"/>
+            <column name="category_id" valueNumeric="5"/>
+            <column name="urgency" value="Low"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="99"/>
+            <column name="name" value="Ограничение доступа к страницам"/>
+            <column name="description" value="Ограничение доступа к определенным страницам, не удается получить к ним доступ."/>
+            <column name="created_on" valueDate="2024-02-13"/>
+            <column name="desired_resolution_date" valueDate="2024-02-19"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="2"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="urgency" value="High"/>
+            <column name="approver_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="103"/>
+            <column name="name" value="Малые объёмы данных долго анализируются"/>
+            <column name="description" value="Даже небольшие объемы данных анализируются слишком долго, нужно оптимизировать процесс анализа."/>
+            <column name="created_on" valueDate="2024-03-10"/>
+            <column name="desired_resolution_date" valueDate="2024-03-14"/>
+            <column name="assignee_id" valueNumeric="6"/>
+            <column name="owner_id" valueNumeric="4"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="2"/>
+            <column name="urgency" value="High"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="93"/>
+            <column name="name" value="Список пользователей пуст"/>
+            <column name="description" value="Полученный список пользователей пуст, необходимо исправить эту проблему."/>
+            <column name="created_on" valueDate="2024-01-15"/>
+            <column name="desired_resolution_date" valueDate="2024-01-21"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="3"/>
+            <column name="state" value="Done"/>
+            <column name="category_id" valueNumeric="2"/>
+            <column name="urgency" value="Low"/>
+            <column name="approver_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="89"/>
+            <column name="name" value="Ошибка авторизации"/>
+            <column name="description" value="При попытке авторизации возникает ошибка, доступ к системе невозможен."/>
+            <column name="created_on" valueDate="2024-06-01"/>
+            <column name="desired_resolution_date" valueDate="2024-06-21"/>
+            <column name="assignee_id" valueNumeric="5"/>
+            <column name="owner_id" valueNumeric="1"/>
+            <column name="state" value="In_progress"/>
+            <column name="category_id" valueNumeric="4"/>
+            <column name="urgency" value="Low"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="ticket">
+            <column name="id" valueNumeric="88"/>
+            <column name="name" value="Вычисление не работает"/>
+            <column name="description" value="Ожидаемые вычисления или расчеты не выполняются, возникают ошибки при их выполнении."/>
+            <column name="created_on" valueDate="2024-06-04"/>
+            <column name="desired_resolution_date" valueDate="2024-06-16"/>
+            <column name="assignee_id"/>
+            <column name="owner_id" valueNumeric="4"/>
+            <column name="state" value="Approved"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="urgency" value="Low"/>
+            <column name="approver_id" valueNumeric="3"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Dell (generated)" id="1720177745106-3">
+        <insert tableName="history">
+            <column name="id" valueNumeric="211"/>
+            <column name="ticket_id" valueNumeric="72"/>
+            <column name="timestamp" valueDate="2023-11-28T06:43:56"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="212"/>
+            <column name="ticket_id" valueNumeric="75"/>
+            <column name="timestamp" valueDate="2024-02-29T05:50:23"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="213"/>
+            <column name="ticket_id" valueNumeric="86"/>
+            <column name="timestamp" valueDate="2024-01-21T15:36:01"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="214"/>
+            <column name="ticket_id" valueNumeric="67"/>
+            <column name="timestamp" valueDate="2023-11-18T03:37:37"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="215"/>
+            <column name="ticket_id" valueNumeric="73"/>
+            <column name="timestamp" valueDate="2024-06-01T11:35:40"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="1"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="216"/>
+            <column name="ticket_id" valueNumeric="94"/>
+            <column name="timestamp" valueDate="2024-01-15T12:25:38"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="217"/>
+            <column name="ticket_id" valueNumeric="84"/>
+            <column name="timestamp" valueDate="2024-01-23T21:23:38"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="218"/>
+            <column name="ticket_id" valueNumeric="95"/>
+            <column name="timestamp" valueDate="2023-11-15T19:34:55"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="1"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="219"/>
+            <column name="ticket_id" valueNumeric="102"/>
+            <column name="timestamp" valueDate="2024-06-06T01:06:21"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="1"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="220"/>
+            <column name="ticket_id" valueNumeric="82"/>
+            <column name="timestamp" valueDate="2023-12-17T23:15:44"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="221"/>
+            <column name="ticket_id" valueNumeric="88"/>
+            <column name="timestamp" valueDate="2024-06-04T06:12:05"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="222"/>
+            <column name="ticket_id" valueNumeric="74"/>
+            <column name="timestamp" valueDate="2024-06-05T03:07:21"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="223"/>
+            <column name="ticket_id" valueNumeric="100"/>
+            <column name="timestamp" valueDate="2024-06-04T04:25:15"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="224"/>
+            <column name="ticket_id" valueNumeric="70"/>
+            <column name="timestamp" valueDate="2024-01-02T16:31:44"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="225"/>
+            <column name="ticket_id" valueNumeric="97"/>
+            <column name="timestamp" valueDate="2023-11-02T20:10:49"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="226"/>
+            <column name="ticket_id" valueNumeric="92"/>
+            <column name="timestamp" valueDate="2024-02-10T23:34:22"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="1"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="227"/>
+            <column name="ticket_id" valueNumeric="101"/>
+            <column name="timestamp" valueDate="2023-12-17T01:47:34"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="1"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="228"/>
+            <column name="ticket_id" valueNumeric="68"/>
+            <column name="timestamp" valueDate="2024-06-05T18:05:50"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="229"/>
+            <column name="ticket_id" valueNumeric="96"/>
+            <column name="timestamp" valueDate="2024-02-21T11:19:29"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="230"/>
+            <column name="ticket_id" valueNumeric="71"/>
+            <column name="timestamp" valueDate="2023-12-23T21:14:34"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="231"/>
+            <column name="ticket_id" valueNumeric="90"/>
+            <column name="timestamp" valueDate="2023-12-27T09:43:29"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="232"/>
+            <column name="ticket_id" valueNumeric="66"/>
+            <column name="timestamp" valueDate="2024-02-23T19:55:32"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="233"/>
+            <column name="ticket_id" valueNumeric="80"/>
+            <column name="timestamp" valueDate="2023-11-18T22:53:28"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="1"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="234"/>
+            <column name="ticket_id" valueNumeric="98"/>
+            <column name="timestamp" valueDate="2024-06-01T06:41:14"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="235"/>
+            <column name="ticket_id" valueNumeric="87"/>
+            <column name="timestamp" valueDate="2024-06-02T14:48:42"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="1"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="236"/>
+            <column name="ticket_id" valueNumeric="91"/>
+            <column name="timestamp" valueDate="2024-02-16T02:50:07"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="237"/>
+            <column name="ticket_id" valueNumeric="69"/>
+            <column name="timestamp" valueDate="2023-11-24T05:31:10"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="238"/>
+            <column name="ticket_id" valueNumeric="99"/>
+            <column name="timestamp" valueDate="2024-02-13T11:22:34"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="239"/>
+            <column name="ticket_id" valueNumeric="103"/>
+            <column name="timestamp" valueDate="2024-03-10T15:03:29"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="240"/>
+            <column name="ticket_id" valueNumeric="93"/>
+            <column name="timestamp" valueDate="2024-01-15T20:31:50"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="241"/>
+            <column name="ticket_id" valueNumeric="89"/>
+            <column name="timestamp" valueDate="2024-06-01T02:35:42"/>
+            <column name="action" value="Заявка создана"/>
+            <column name="user_id" valueNumeric="1"/>
+            <column name="description" value="Заявка создана"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="242"/>
+            <column name="ticket_id" valueNumeric="72"/>
+            <column name="timestamp" valueDate="2023-11-28T08:36:59"/>
+            <column name="action" value="Заявка изменена"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Заявка изменена"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="243"/>
+            <column name="ticket_id" valueNumeric="75"/>
+            <column name="timestamp" valueDate="2024-02-29T07:15:40"/>
+            <column name="action" value="Заявка изменена"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка изменена"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="244"/>
+            <column name="ticket_id" valueNumeric="67"/>
+            <column name="timestamp" valueDate="2023-11-18T05:04:26"/>
+            <column name="action" value="Заявка изменена"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Заявка изменена"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="245"/>
+            <column name="ticket_id" valueNumeric="94"/>
+            <column name="timestamp" valueDate="2024-01-15T14:10:43"/>
+            <column name="action" value="Заявка изменена"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка изменена"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="246"/>
+            <column name="ticket_id" valueNumeric="101"/>
+            <column name="timestamp" valueDate="2023-12-17T03:28:00"/>
+            <column name="action" value="Заявка изменена"/>
+            <column name="user_id" valueNumeric="1"/>
+            <column name="description" value="Заявка изменена"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="247"/>
+            <column name="ticket_id" valueNumeric="68"/>
+            <column name="timestamp" valueDate="2024-06-05T19:06:35"/>
+            <column name="action" value="Заявка изменена"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Заявка изменена"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="248"/>
+            <column name="ticket_id" valueNumeric="71"/>
+            <column name="timestamp" valueDate="2023-12-23T22:34:15"/>
+            <column name="action" value="Заявка изменена"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка изменена"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="249"/>
+            <column name="ticket_id" valueNumeric="91"/>
+            <column name="timestamp" valueDate="2024-02-16T03:52:49"/>
+            <column name="action" value="Заявка изменена"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка изменена"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="250"/>
+            <column name="ticket_id" valueNumeric="103"/>
+            <column name="timestamp" valueDate="2024-03-10T16:18:54"/>
+            <column name="action" value="Заявка изменена"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Заявка изменена"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="408"/>
+            <column name="ticket_id" valueNumeric="70"/>
+            <column name="timestamp" valueDate="2024-06-07T01:15:57.277148"/>
+            <column name="action" value="Выполнение заявки оценено!"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Выполнение заявки оценено ★★★★★с комментарием: Очень хорошо!"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="319"/>
+            <column name="ticket_id" valueNumeric="72"/>
+            <column name="timestamp" valueDate="2023-11-29T05:53:01"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="320"/>
+            <column name="ticket_id" valueNumeric="75"/>
+            <column name="timestamp" valueDate="2024-03-01T04:51:28"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="321"/>
+            <column name="ticket_id" valueNumeric="86"/>
+            <column name="timestamp" valueDate="2024-01-22T19:56:41"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="322"/>
+            <column name="ticket_id" valueNumeric="67"/>
+            <column name="timestamp" valueDate="2023-11-19T17:03:03"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="323"/>
+            <column name="ticket_id" valueNumeric="73"/>
+            <column name="timestamp" valueDate="2024-06-02T01:47:06"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="324"/>
+            <column name="ticket_id" valueNumeric="94"/>
+            <column name="timestamp" valueDate="2024-01-16T10:06:50"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="325"/>
+            <column name="ticket_id" valueNumeric="84"/>
+            <column name="timestamp" valueDate="2024-01-24T19:45:57"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="326"/>
+            <column name="ticket_id" valueNumeric="82"/>
+            <column name="timestamp" valueDate="2023-12-18T19:09:25"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="327"/>
+            <column name="ticket_id" valueNumeric="88"/>
+            <column name="timestamp" valueDate="2024-06-05T13:21:43"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="328"/>
+            <column name="ticket_id" valueNumeric="100"/>
+            <column name="timestamp" valueDate="2024-06-05T15:06:51"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="329"/>
+            <column name="ticket_id" valueNumeric="70"/>
+            <column name="timestamp" valueDate="2024-01-03T07:00:58"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="330"/>
+            <column name="ticket_id" valueNumeric="97"/>
+            <column name="timestamp" valueDate="2023-11-03T14:13:57"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="331"/>
+            <column name="ticket_id" valueNumeric="92"/>
+            <column name="timestamp" valueDate="2024-02-11T22:27:05"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="332"/>
+            <column name="ticket_id" valueNumeric="101"/>
+            <column name="timestamp" valueDate="2023-12-18T18:48:41"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="333"/>
+            <column name="ticket_id" valueNumeric="71"/>
+            <column name="timestamp" valueDate="2023-12-24T06:18:26"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="334"/>
+            <column name="ticket_id" valueNumeric="90"/>
+            <column name="timestamp" valueDate="2023-12-28T22:55:14"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="335"/>
+            <column name="ticket_id" valueNumeric="66"/>
+            <column name="timestamp" valueDate="2024-02-24T03:31:05"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="336"/>
+            <column name="ticket_id" valueNumeric="80"/>
+            <column name="timestamp" valueDate="2023-11-19T16:51:33"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="337"/>
+            <column name="ticket_id" valueNumeric="98"/>
+            <column name="timestamp" valueDate="2024-06-02T07:16:19"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="338"/>
+            <column name="ticket_id" valueNumeric="87"/>
+            <column name="timestamp" valueDate="2024-06-03T21:45:24"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="339"/>
+            <column name="ticket_id" valueNumeric="91"/>
+            <column name="timestamp" valueDate="2024-02-17T04:08:57"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="340"/>
+            <column name="ticket_id" valueNumeric="99"/>
+            <column name="timestamp" valueDate="2024-02-14T07:11:09"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="341"/>
+            <column name="ticket_id" valueNumeric="103"/>
+            <column name="timestamp" valueDate="2024-03-11T10:46:21"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="342"/>
+            <column name="ticket_id" valueNumeric="93"/>
+            <column name="timestamp" valueDate="2024-01-16T14:22:32"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="343"/>
+            <column name="ticket_id" valueNumeric="89"/>
+            <column name="timestamp" valueDate="2024-06-02T12:52:12"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Одобрена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="344"/>
+            <column name="ticket_id" valueNumeric="95"/>
+            <column name="timestamp" valueDate="2023-11-16T01:26:49"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Отклонена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="345"/>
+            <column name="ticket_id" valueNumeric="96"/>
+            <column name="timestamp" valueDate="2024-02-22T09:13:35"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Отклонена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="346"/>
+            <column name="ticket_id" valueNumeric="69"/>
+            <column name="timestamp" valueDate="2023-11-25T15:26:00"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Статус заявки изменён с 'Новая' на 'Отклонена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="347"/>
+            <column name="ticket_id" valueNumeric="72"/>
+            <column name="timestamp" valueDate="2023-11-30T06:33:01"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="348"/>
+            <column name="ticket_id" valueNumeric="75"/>
+            <column name="timestamp" valueDate="2024-03-02T06:23:47"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="349"/>
+            <column name="ticket_id" valueNumeric="86"/>
+            <column name="timestamp" valueDate="2024-01-23T13:29:42"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="350"/>
+            <column name="ticket_id" valueNumeric="67"/>
+            <column name="timestamp" valueDate="2023-11-20T09:11:08"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="351"/>
+            <column name="ticket_id" valueNumeric="73"/>
+            <column name="timestamp" valueDate="2024-06-03T11:20:05"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="352"/>
+            <column name="ticket_id" valueNumeric="94"/>
+            <column name="timestamp" valueDate="2024-01-17T17:30:09"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="353"/>
+            <column name="ticket_id" valueNumeric="82"/>
+            <column name="timestamp" valueDate="2023-12-19T11:20:33"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="354"/>
+            <column name="ticket_id" valueNumeric="70"/>
+            <column name="timestamp" valueDate="2024-01-04T00:48:16"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="355"/>
+            <column name="ticket_id" valueNumeric="97"/>
+            <column name="timestamp" valueDate="2023-11-04T13:29:49"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="356"/>
+            <column name="ticket_id" valueNumeric="92"/>
+            <column name="timestamp" valueDate="2024-02-12T04:36:54"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="357"/>
+            <column name="ticket_id" valueNumeric="101"/>
+            <column name="timestamp" valueDate="2023-12-19T13:34:38"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="358"/>
+            <column name="ticket_id" valueNumeric="90"/>
+            <column name="timestamp" valueDate="2023-12-29T11:30:00"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="359"/>
+            <column name="ticket_id" valueNumeric="66"/>
+            <column name="timestamp" valueDate="2024-02-25T18:36:49"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="360"/>
+            <column name="ticket_id" valueNumeric="80"/>
+            <column name="timestamp" valueDate="2023-11-20T23:38:52"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="361"/>
+            <column name="ticket_id" valueNumeric="98"/>
+            <column name="timestamp" valueDate="2024-06-03T19:44:51"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="362"/>
+            <column name="ticket_id" valueNumeric="91"/>
+            <column name="timestamp" valueDate="2024-02-18T11:19:13"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="363"/>
+            <column name="ticket_id" valueNumeric="99"/>
+            <column name="timestamp" valueDate="2024-02-15T06:22:37"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="364"/>
+            <column name="ticket_id" valueNumeric="103"/>
+            <column name="timestamp" valueDate="2024-03-12T01:30:33"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="365"/>
+            <column name="ticket_id" valueNumeric="93"/>
+            <column name="timestamp" valueDate="2024-01-17T22:10:32"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="366"/>
+            <column name="ticket_id" valueNumeric="89"/>
+            <column name="timestamp" valueDate="2024-06-03T20:21:28"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'В процессе выполнения'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="367"/>
+            <column name="ticket_id" valueNumeric="84"/>
+            <column name="timestamp" valueDate="2024-01-25T16:02:34"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'Отменена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="368"/>
+            <column name="ticket_id" valueNumeric="71"/>
+            <column name="timestamp" valueDate="2023-12-25T00:29:38"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'Одобрена' на 'Отменена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="369"/>
+            <column name="ticket_id" valueNumeric="72"/>
+            <column name="timestamp" valueDate="2023-12-05T01:14:40"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="370"/>
+            <column name="ticket_id" valueNumeric="75"/>
+            <column name="timestamp" valueDate="2024-03-03T04:29:19"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="371"/>
+            <column name="ticket_id" valueNumeric="86"/>
+            <column name="timestamp" valueDate="2024-01-26T20:40:00"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="372"/>
+            <column name="ticket_id" valueNumeric="67"/>
+            <column name="timestamp" valueDate="2023-11-25T15:13:31"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="373"/>
+            <column name="ticket_id" valueNumeric="73"/>
+            <column name="timestamp" valueDate="2024-06-08T23:54:08"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="374"/>
+            <column name="ticket_id" valueNumeric="94"/>
+            <column name="timestamp" valueDate="2024-01-22T18:24:41"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="375"/>
+            <column name="ticket_id" valueNumeric="82"/>
+            <column name="timestamp" valueDate="2023-12-20T11:17:01"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="376"/>
+            <column name="ticket_id" valueNumeric="70"/>
+            <column name="timestamp" valueDate="2024-01-07T17:55:03"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="377"/>
+            <column name="ticket_id" valueNumeric="97"/>
+            <column name="timestamp" valueDate="2023-11-05T19:44:45"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="378"/>
+            <column name="ticket_id" valueNumeric="92"/>
+            <column name="timestamp" valueDate="2024-02-13T10:07:59"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="379"/>
+            <column name="ticket_id" valueNumeric="101"/>
+            <column name="timestamp" valueDate="2023-12-24T01:22:58"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="380"/>
+            <column name="ticket_id" valueNumeric="90"/>
+            <column name="timestamp" valueDate="2023-12-30T19:37:17"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="381"/>
+            <column name="ticket_id" valueNumeric="66"/>
+            <column name="timestamp" valueDate="2024-02-27T07:01:13"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="382"/>
+            <column name="ticket_id" valueNumeric="80"/>
+            <column name="timestamp" valueDate="2023-11-23T20:43:40"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="383"/>
+            <column name="ticket_id" valueNumeric="91"/>
+            <column name="timestamp" valueDate="2024-02-22T10:33:24"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="384"/>
+            <column name="ticket_id" valueNumeric="99"/>
+            <column name="timestamp" valueDate="2024-02-16T03:22:49"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="385"/>
+            <column name="ticket_id" valueNumeric="103"/>
+            <column name="timestamp" valueDate="2024-03-14T17:38:56"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="386"/>
+            <column name="ticket_id" valueNumeric="93"/>
+            <column name="timestamp" valueDate="2024-01-18T02:41:00"/>
+            <column name="action" value="Статус заявки изменён"/>
+            <column name="user_id" valueNumeric="5"/>
+            <column name="description" value="Статус заявки изменён с 'В процессе выполнения' на 'Выполнена'"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="391"/>
+            <column name="ticket_id" valueNumeric="72"/>
+            <column name="timestamp" valueDate="2023-12-08T02:44:06"/>
+            <column name="action" value="Выполнение заявки оценено"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Выполнение заявки оценено ★★★★ с комментарием: &quot;Осталось пару неудобств, но в целом ок&quot;"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="393"/>
+            <column name="ticket_id" valueNumeric="90"/>
+            <column name="timestamp" valueDate="2024-01-04T03:38:09"/>
+            <column name="action" value="Выполнение заявки оценено"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Выполнение заявки оценено ★★★ с комментарием: &quot;Слишком долгое выполнение&quot;"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="392"/>
+            <column name="ticket_id" valueNumeric="93"/>
+            <column name="timestamp" valueDate="2024-01-24T10:40:48"/>
+            <column name="action" value="Выполнение заявки оценено"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="description" value="Выполнение заявки оценено ★★★★★ с комментарием: &quot;Отличная работа&quot;"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="390"/>
+            <column name="ticket_id" valueNumeric="82"/>
+            <column name="timestamp" valueDate="2023-12-25T10:04:18"/>
+            <column name="action" value="Выполнение заявки оценено"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Выполнение заявки оценено ★★★★★ с комментарием: &quot;Вопросов нет&quot;"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="395"/>
+            <column name="ticket_id" valueNumeric="86"/>
+            <column name="timestamp" valueDate="2024-02-02T14:43:19"/>
+            <column name="action" value="Выполнение заявки оценено"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Выполнение заявки оценено ★★★★ с комментарием: &quot;Супер, но могло быть чуть получше&quot;"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="394"/>
+            <column name="ticket_id" valueNumeric="91"/>
+            <column name="timestamp" valueDate="2024-02-26T17:49:38"/>
+            <column name="action" value="Выполнение заявки оценено"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="description" value="Выполнение заявки оценено ★★★★★ с комментарием: &quot;Очень оперативно, спасибо&quot;"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="387"/>
+            <column name="ticket_id" valueNumeric="75"/>
+            <column name="timestamp" valueDate="2024-03-11T08:01:20"/>
+            <column name="action" value="Выполнение заявки оценено"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Выполнение заявки оценено ★★★★★ с комментарием: &quot;Отлично!&quot;"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="388"/>
+            <column name="ticket_id" valueNumeric="97"/>
+            <column name="timestamp" valueDate="2023-11-12T13:21:04"/>
+            <column name="action" value="Выполнение заявки оценено"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Выполнение заявки оценено ★★★ с комментарием: &quot;Хорошо, но долго&quot;"/>
+        </insert>
+        <insert tableName="history">
+            <column name="id" valueNumeric="389"/>
+            <column name="ticket_id" valueNumeric="70"/>
+            <column name="timestamp" valueDate="2024-01-12T10:58:36"/>
+            <column name="action" value="Выполнение заявки оценено"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="description" value="Выполнение заявки оценено ★★★★★ с комментарием: &quot;Быстро и эффективно, как и нужно!&quot;"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Dell (generated)" id="1720177745106-4">
+        <insert tableName="comment">
+            <column name="id" valueNumeric="69"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="sdfsdsg"/>
+            <column name="timestamp" valueDate="2024-05-18T22:42:38.226514"/>
+            <column name="ticket_id" valueNumeric="80"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="71"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="rrrr"/>
+            <column name="timestamp" valueDate="2024-05-20T01:10:52.718176"/>
+            <column name="ticket_id" valueNumeric="84"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="72"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="&quot;asdaadDDa&quot;"/>
+            <column name="timestamp" valueDate="2024-05-20T16:11:02.495267"/>
+            <column name="ticket_id" valueNumeric="84"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="73"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="&quot;hhh&quot;"/>
+            <column name="timestamp" valueDate="2024-05-20T16:13:44.122446"/>
+            <column name="ticket_id" valueNumeric="84"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="75"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="UNAUTH"/>
+            <column name="timestamp" valueDate="2024-05-20T22:22:42.05671"/>
+            <column name="ticket_id" valueNumeric="86"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="76"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="&quot;hhh&quot;"/>
+            <column name="timestamp" valueDate="2024-06-06T19:25:05.486819"/>
+            <column name="ticket_id" valueNumeric="101"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="67"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="&quot;ddddddddd&quot;"/>
+            <column name="timestamp" valueDate="2024-05-17T22:39:36.749036"/>
+            <column name="ticket_id" valueNumeric="87"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="65"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="&quot;something&quot;"/>
+            <column name="timestamp" valueDate="2024-05-17T22:30:14.47485"/>
+            <column name="ticket_id" valueNumeric="87"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="64"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="&quot;WWWWWW&quot;"/>
+            <column name="timestamp" valueDate="2024-05-17T22:25:59.997403"/>
+            <column name="ticket_id" valueNumeric="71"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="66"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="&quot;something123123&quot;"/>
+            <column name="timestamp" valueDate="2024-05-17T22:32:40.614725"/>
+            <column name="ticket_id" valueNumeric="87"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="63"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="text" value="Хорошо, на устройствах с актуальной версией уведомления есть, но с сильной задержкой"/>
+            <column name="timestamp" valueDate="2024-01-06T21:38:16"/>
+            <column name="ticket_id" valueNumeric="70"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="61"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="text" value="Проблема приобрела ещё больший масштаб за последние 2 дня, уведомления не приходят и на ПК тоже"/>
+            <column name="timestamp" valueDate="2024-01-05T00:48:16"/>
+            <column name="ticket_id" valueNumeric="70"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="62"/>
+            <column name="user_id" valueNumeric="6"/>
+            <column name="text" value="Попробуйте использовать устройства с версией Android выше 12.1 и Windows 10+, на старых версиях проблема ещё исправляется"/>
+            <column name="timestamp" valueDate="2024-01-06T12:39:19"/>
+            <column name="ticket_id" valueNumeric="70"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="86"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="&quot;test com,&quot;"/>
+            <column name="timestamp" valueDate="2024-07-04T21:22:13.505555"/>
+            <column name="ticket_id" valueNumeric="102"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="87"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="&quot;22222&quot;"/>
+            <column name="timestamp" valueDate="2024-07-04T21:26:05.849513"/>
+            <column name="ticket_id" valueNumeric="102"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="88"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="&quot;123&quot;"/>
+            <column name="timestamp" valueDate="2024-07-04T21:26:16.385885"/>
+            <column name="ticket_id" valueNumeric="102"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="89"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="&quot;ertertert&quot;"/>
+            <column name="timestamp" valueDate="2024-07-04T21:26:27.813098"/>
+            <column name="ticket_id" valueNumeric="102"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="90"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="{&quot;commentText&quot;:&quot;aaaaaa123 ssd&quot;}"/>
+            <column name="timestamp" valueDate="2024-07-04T21:28:34.341764"/>
+            <column name="ticket_id" valueNumeric="102"/>
+        </insert>
+        <insert tableName="comment">
+            <column name="id" valueNumeric="91"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="text" value="fgh ff 1"/>
+            <column name="timestamp" valueDate="2024-07-04T21:47:16.626648"/>
+            <column name="ticket_id" valueNumeric="102"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Dell (generated)" id="1720177745106-5">
+        <insert tableName="feedback">
+            <column name="id" valueNumeric="10"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="rate" valueNumeric="3"/>
+            <column name="timestamp" valueDate="2023-11-12T13:21:04"/>
+            <column name="text" value="Хорошо, но долго"/>
+            <column name="ticket_id" valueNumeric="97"/>
+        </insert>
+        <insert tableName="feedback">
+            <column name="id" valueNumeric="11"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="rate" valueNumeric="3"/>
+            <column name="timestamp" valueDate="2024-01-04T03:38:09"/>
+            <column name="text" value="Слишком долгое выполнение"/>
+            <column name="ticket_id" valueNumeric="90"/>
+        </insert>
+        <insert tableName="feedback">
+            <column name="id" valueNumeric="12"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="rate" valueNumeric="4"/>
+            <column name="timestamp" valueDate="2023-12-08T02:44:06"/>
+            <column name="text" value="Осталось пару неудобств, но в целом ок"/>
+            <column name="ticket_id" valueNumeric="72"/>
+        </insert>
+        <insert tableName="feedback">
+            <column name="id" valueNumeric="13"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="rate" valueNumeric="4"/>
+            <column name="timestamp" valueDate="2024-02-02T14:43:19"/>
+            <column name="text" value="Супер, но могло быть чуть получше"/>
+            <column name="ticket_id" valueNumeric="86"/>
+        </insert>
+        <insert tableName="feedback">
+            <column name="id" valueNumeric="14"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="rate" valueNumeric="5"/>
+            <column name="timestamp" valueDate="2024-03-11T08:01:20"/>
+            <column name="text" value="Отлично!"/>
+            <column name="ticket_id" valueNumeric="75"/>
+        </insert>
+        <insert tableName="feedback">
+            <column name="id" valueNumeric="16"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="rate" valueNumeric="5"/>
+            <column name="timestamp" valueDate="2023-12-25T10:04:18"/>
+            <column name="text" value="Вопросов нет"/>
+            <column name="ticket_id" valueNumeric="82"/>
+        </insert>
+        <insert tableName="feedback">
+            <column name="id" valueNumeric="17"/>
+            <column name="user_id" valueNumeric="4"/>
+            <column name="rate" valueNumeric="5"/>
+            <column name="timestamp" valueDate="2024-02-26T17:49:38"/>
+            <column name="text" value="Очень оперативно, спасибо"/>
+            <column name="ticket_id" valueNumeric="91"/>
+        </insert>
+        <insert tableName="feedback">
+            <column name="id" valueNumeric="18"/>
+            <column name="user_id" valueNumeric="3"/>
+            <column name="rate" valueNumeric="5"/>
+            <column name="timestamp" valueDate="2024-01-24T10:40:48"/>
+            <column name="text" value="Отличная работа"/>
+            <column name="ticket_id" valueNumeric="93"/>
+        </insert>
+        <insert tableName="feedback">
+            <column name="id" valueNumeric="15"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="rate" valueNumeric="5"/>
+            <column name="timestamp" valueDate="2024-06-07T01:15:57.277148"/>
+            <column name="text" value="Очень хорошо!"/>
+            <column name="ticket_id" valueNumeric="70"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

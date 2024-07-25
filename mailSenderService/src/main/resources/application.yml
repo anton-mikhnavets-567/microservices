@@ -1,0 +1,46 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: mail-sender-service
+  servlet:
+    multipart:
+      max-file-size: 5MB
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      bootstrap-servers: localhost:9092
+      group-id: 1
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
+  mail:
+    username: antoha052003@gmail.com
+    host: smtp.gmail.com
+    port: 587
+    password: zqnz gwru ozhk lxyr
+    properties:
+      mail:
+        smtp:
+          starttls:
+            required: true
+            enable: true
+          auth: true
+          transport.protocol: smtp
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:9090/realms/microservices_realm/protocol/openid-connect/certs
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+logging.level:
+  org.springframework.cloud.gateway: DEBUG
+  org.springframework.security: DEBUG
+  org.springframework.web.reactive.function.client: TRACE

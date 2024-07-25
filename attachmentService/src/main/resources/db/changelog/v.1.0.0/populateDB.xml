@@ -1,0 +1,69 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+
+<!--    <changeSet author="Dell (generated)" id="1720177745106-2">-->
+<!--        <insert tableName="attachment">-->
+<!--            <column name="id" valueNumeric="214"/>-->
+<!--            <column name="contents" valueComputed="UNSUPPORTED FOR DIFF: BINARY DATA"/>-->
+<!--            <column name="ticket_id" valueNumeric="82"/>-->
+<!--            <column name="name" value="отчёт.docx"/>-->
+<!--        </insert>-->
+<!--        <insert tableName="attachment">-->
+<!--            <column name="id" valueNumeric="206"/>-->
+<!--            <column name="contents" valueComputed="UNSUPPORTED FOR DIFF: BINARY DATA"/>-->
+<!--            <column name="ticket_id" valueNumeric="71"/>-->
+<!--            <column name="name" value="отчёт.docx"/>-->
+<!--        </insert>-->
+<!--        <insert tableName="attachment">-->
+<!--            <column name="id" valueNumeric="207"/>-->
+<!--            <column name="contents" valueComputed="UNSUPPORTED FOR DIFF: BINARY DATA"/>-->
+<!--            <column name="ticket_id" valueNumeric="80"/>-->
+<!--            <column name="name" value="отчёт об ошибке.docx"/>-->
+<!--        </insert>-->
+<!--        <insert tableName="attachment">-->
+<!--            <column name="id" valueNumeric="218"/>-->
+<!--            <column name="contents" valueComputed="UNSUPPORTED FOR DIFF: BINARY DATA"/>-->
+<!--            <column name="ticket_id" valueNumeric="84"/>-->
+<!--            <column name="name" value="дополнительно.pdf"/>-->
+<!--        </insert>-->
+<!--        <insert tableName="attachment">-->
+<!--            <column name="id" valueNumeric="221"/>-->
+<!--            <column name="contents" valueComputed="UNSUPPORTED FOR DIFF: BINARY DATA"/>-->
+<!--            <column name="ticket_id" valueNumeric="86"/>-->
+<!--            <column name="name" value="полный отчёт.docx"/>-->
+<!--        </insert>-->
+<!--        <insert tableName="attachment">-->
+<!--            <column name="id" valueNumeric="209"/>-->
+<!--            <column name="contents" valueComputed="UNSUPPORTED FOR DIFF: BINARY DATA"/>-->
+<!--            <column name="ticket_id" valueNumeric="70"/>-->
+<!--            <column name="name" value="информация об ошибке.docx"/>-->
+<!--        </insert>-->
+<!--        <insert tableName="attachment">-->
+<!--            <column name="id" valueNumeric="222"/>-->
+<!--            <column name="contents" valueComputed="UNSUPPORTED FOR DIFF: BINARY DATA"/>-->
+<!--            <column name="ticket_id" valueNumeric="86"/>-->
+<!--            <column name="name" value="как было.docx"/>-->
+<!--        </insert>-->
+<!--        <insert tableName="attachment">-->
+<!--            <column name="id" valueNumeric="211"/>-->
+<!--            <column name="contents" valueComputed="UNSUPPORTED FOR DIFF: BINARY DATA"/>-->
+<!--            <column name="ticket_id" valueNumeric="71"/>-->
+<!--            <column name="name" value="отчёт2.pdf"/>-->
+<!--        </insert>-->
+<!--        <insert tableName="attachment">-->
+<!--            <column name="id" valueNumeric="217"/>-->
+<!--            <column name="contents" valueComputed="UNSUPPORTED FOR DIFF: BINARY DATA"/>-->
+<!--            <column name="ticket_id" valueNumeric="84"/>-->
+<!--            <column name="name" value="отчёт с изображениями.docx"/>-->
+<!--        </insert>-->
+<!--        <insert tableName="attachment">-->
+<!--            <column name="id" valueNumeric="210"/>-->
+<!--            <column name="contents" valueComputed="UNSUPPORTED FOR DIFF: BINARY DATA"/>-->
+<!--            <column name="ticket_id" valueNumeric="70"/>-->
+<!--            <column name="name" value="дополнительно.docx"/>-->
+<!--        </insert>-->
+<!--    </changeSet>-->
+</databaseChangeLog>

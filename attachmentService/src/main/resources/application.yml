@@ -1,0 +1,50 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: attachment-service
+  datasource:
+    url: jdbc:postgresql://localhost:5434/attachmentdb
+    username: postgres
+    password: 123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    #    hibernate:
+    #      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+    change-log: classpath:db/changelog/changelog.xml
+    enabled: true
+    drop-first: false
+    default-schema: public
+  sql:
+    init:
+      mode: never
+      schema-locations: classpath*:database/initDB.sql
+      data-locations: classpath*:database/populateDB.sql
+  servlet:
+    multipart:
+      max-file-size: 5MB
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:9090/realms/microservices_realm/protocol/openid-connect/certs
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+logging.level:
+  org.springframework.cloud.gateway: DEBUG
+  org.springframework.security: DEBUG
+  org.springframework.web.reactive.function.client: TRACE

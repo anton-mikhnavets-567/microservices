@@ -1,0 +1,26 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="1" author="kiwi">
+        <sql>
+            create type "userRole" as enum('Employee','Manager','Engineer');
+        </sql>
+    </changeSet>
+
+    <changeSet id="2" author="kiwi">
+        <sql>
+            create table if not exists "user"
+            (
+                id serial primary key,
+                first_name varchar(15) not null,
+                last_name varchar (15),
+                "role" "userRole" not null,
+                email varchar(100) not null,
+                "password" varchar(100) not null
+                );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
